@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import SearchSection  from './page/SearchSection.js'
+import SearchSection  from './page/SearchSection.js';
 import './App.css';
 
 function App() {
