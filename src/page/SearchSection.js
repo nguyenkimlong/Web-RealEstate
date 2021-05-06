@@ -13,7 +13,7 @@ class SearchSection extends Component {
             selectedBed: "",
             widthValue: 0,
             lengthValue: 0,
-            selectedFloor: 0,
+            selectedFloor: 1,
         }
     }
 
