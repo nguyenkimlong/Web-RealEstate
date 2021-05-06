@@ -83,7 +83,7 @@ class SearchResult extends Component {
                 {
                   this.state.data && this.state.data.length > 0 && this.state.data.map((item) => {
                     return <tr key={item.id}>
-                      <td width="45%"><img src={item.img} className="img-thumbnail" /></td>
+                      <td width="45%"><img src={item.img} className="img-thumbnail" alt={item.name} /></td>
                       <td>{item.name}</td>
                       <td>{item.acreage}</td>
                       <td>{item.rooms}</td>
