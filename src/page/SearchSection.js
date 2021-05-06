@@ -8,19 +8,29 @@ class SearchSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            isSearch: 0,
             selectedProperty: "",
-            selectedBed: ""
+            selectedBed: "",
+            widthValue: 0,
+            lengthValue: 0,
+            selectedFloor: 0,
         }
     }
 
     onChangeProperty(event) {
         this.setState({ selectedProperty: event.target.value });
-        console.log(this.state.selectedProperty);
     }
 
     onChangeBeds(event) {
         this.setState({ selectedBed: event.target.value });
-        console.log(this.state.selectedBed);
+    }
+
+    onSearchData() {
+        this.setState({ isSearch: Math.random() });
+        console.log("onSearchData");
+
+        console.log("stateSearch",this.state);
+        this.forceUpdate();
     }
 
     render() {
@@ -56,15 +66,15 @@ class SearchSection extends Component {
                                             </Form.Control>
                                         </div>
                                         <div className="col-3">
-                                            <Form.Control type="number" placeholder="Chiều Rộng" />
+                                            <Form.Control type="number" placeholder="Chiều Rộng" onChange={e => { this.setState({ widthValue: e.target.value }); }} />
                                         </div>
                                         <div className="col-3">
-                                            <Form.Control type="number" placeholder="Chiều Dài" />
+                                            <Form.Control type="number" placeholder="Chiều Dài" onChange={e => { this.setState({ lengthValue: e.target.value }); }} />
                                         </div>
                                         <div className="col-3">
                                             <Form.Group controlId="formBasicRange">
                                                 <Form.Label>Số Tầng</Form.Label>
-                                                <Form.Control as="select">
+                                                <Form.Control as="select" onChange={e => { this.setState({ selectedFloor: e.target.value }); }}>
                                                     <option value="1">1 Tầng</option>
                                                     <option value="2">2 Tầng</option>
                                                     <option value="3">3 Tầng</option>
@@ -77,15 +87,17 @@ class SearchSection extends Component {
                                     </div>
                                     <div className="form-row">
                                         <div className="col-12 col-md-3">
-                                            <button className="btn btn-block btn-lg btn-primary" type="button">Search</button>
+                                            <button className="btn btn-block btn-lg btn-primary" type="button" onClick={this.onSearchData.bind(this)}>Search</button>
                                         </div>
                                     </div>
                                 </Form>
                             </div>
                         </div>
                     </div>
+
                 </header>
-                <SearchResult />
+
+                {this.state.isSearch > 0 && <SearchResult data={this.state} key={this.state.isSearch} />}
             </div>
 
 
