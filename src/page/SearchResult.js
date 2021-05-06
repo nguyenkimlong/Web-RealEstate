@@ -1,7 +1,5 @@
 
-
-import { render } from '@testing-library/react';
-import React, { useState, useEffect, Component } from 'react';
+import React, { Component } from 'react';
 
 
 class SearchResult extends Component {
