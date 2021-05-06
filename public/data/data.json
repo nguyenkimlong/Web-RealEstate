@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "căn hộ 1",
+        "type": "House,ApartmentUnit",
+        "acreage": 30,
+        "img": "/data/image/img1.jpg",
+        "rooms": 1,
+        "floor": 1
+    },
+    {
+        "id": 2,
+        "name": "căn hộ 2",
+        "type": "house",
+        "acreage": 35,
+        "img": "/data/image/img2.jpg",
+        "rooms": 2,
+        "floor": 2
+    },
+    {
+        "id": 3,
+        "name": "căn hộ 3",
+        "type": "house,Villa",
+        "acreage": 40,
+        "img": "/data/image/img3.jpg",
+        "rooms": 3,
+        "floor": 3
+    },
+    {
+        "id": 4,
+        "name": "căn hộ 4",
+        "type": "house,Land",
+        "acreage": 50,
+        "img": "/data/image/img4.jpg",
+        "rooms": 4,
+        "floor": 4
+    }
+]
