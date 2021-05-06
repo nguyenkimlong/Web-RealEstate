@@ -34,7 +34,7 @@ class SearchSection extends Component {
                                 <h1 className="mb-5">Find Designs</h1>
                             </div>
                             <div className="col-lg-10 mx-auto">
-                                <form role="form">
+                                <Form>
                                     <div className="form-row">
                                         <div className="col-3">
                                             <Form.Control as="select" defaultValue={''} onChange={this.onChangeProperty.bind(this)}>
@@ -80,7 +80,7 @@ class SearchSection extends Component {
                                             <button className="btn btn-block btn-lg btn-primary" type="button">Search</button>
                                         </div>
                                     </div>
-                                </form>
+                                </Form>
                             </div>
                         </div>
                     </div>
